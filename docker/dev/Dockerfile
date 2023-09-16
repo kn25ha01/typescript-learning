@@ -1,9 +1,7 @@
-FROM node:16.14.2-alpine
-WORKDIR /app
+FROM node:18.17.1-alpine
+WORKDIR /myapp
 
-COPY package.json .
-RUN yarn install
-COPY . .
+RUN npm install -g typescript
 
 EXPOSE 3000
 
